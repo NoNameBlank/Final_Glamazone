@@ -48,7 +48,8 @@ public class ShoppingPanel extends JPanel {
 		super.setOpaque(true);
 		
 		this.setDisplayPanel(new JPanel());
-		this.getDisplayPanel().setLayout(new GridLayout(3,3));
+		// Warum 3, 3  aber 3 und 4?? 
+		this.getDisplayPanel().setLayout(new GridLayout(3,2));
 		
 		//Warum bei ihnen ohne Get/Set gemacht?
 		this.setsPane(new JScrollPane());
@@ -58,7 +59,7 @@ public class ShoppingPanel extends JPanel {
 		this.getsPane().getVerticalScrollBar().setUnitIncrement(16);
 		
 		this.setArtikelList(new ArrayList<>());
-		for(int i = 0; i < 5; i++) {
+		for(int i = 0; i < 15; i++) {
 			this.getDisplayPanel().add(new ArtikelPanel());
 		}
 		
