@@ -21,6 +21,8 @@ public class MainController {
 		
 		this.setMainView(new MainView());
 		this.getMainView().addActionListenerToBtnStartShopping(this::startShopping);
+		this.getMainView().addActionListenerToStartseiteBtn(this::startShopping);
+		this.getMainView().getMainPanel().getMenuPanel().getMenuList().get(0).addActionListener(this::kat1);
 		
 		
 		
@@ -30,5 +32,11 @@ public class MainController {
 		this.getMainView().showMainPanel();
 	}
 	
+	
+	
+	
+	private void kat1(ActionEvent e) {
+		this.getMainView().getMainPanel().getCardPanel().getShoppingPanel().showSearchResults("Kat1 ", "Kat1", "Kat1", 0);
+	}
 
 }

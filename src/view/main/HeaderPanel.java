@@ -6,8 +6,6 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -141,6 +139,8 @@ public class HeaderPanel extends JPanel {
 		//this.setTagDatumZeit(new JLabel("Test"));
 		//this.getTagDatumZeit().setBounds(775, 100, 200, 20);
 		
+		
+		//noch ändern in get/set war nur erstmal zum Testen.
 		JLabel test = new JLabel();
 		
 		Timer timer = new Timer(1000, new ActionListener() {
@@ -164,5 +164,10 @@ public class HeaderPanel extends JPanel {
 		
 
 	}
+	
+	public void addActionListenerToStartseiteBtn(ActionListener al) {
+		this.getBtnStartseite().addActionListener(al);
+	}
+	
 
 }

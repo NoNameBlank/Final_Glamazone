@@ -31,6 +31,7 @@ public class MainView extends JFrame {
 		super.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		// StartPanel wird als ContentPain auf MainPanel gelegt
+		this.setMainPanel(new MainPanel());
 		this.setStartPanel(new StartPanel());
 		super.setContentPane(this.getStartPanel());
 
@@ -40,15 +41,21 @@ public class MainView extends JFrame {
 		super.setVisible(true);
 
 	}
+
 	// getStartPanel-
 	public void addActionListenerToBtnStartShopping(ActionListener al) {
 		this.getStartPanel().addActionListenerToBtnStartShopping(al);
-		
+
 	}
-	
-	//Methode für den Controller damit er weiß was bei dem Klick passieren Soll.
+
+	// get StartPanel von Kategorie ansicht
+	public void addActionListenerToStartseiteBtn(ActionListener al) {
+		this.getMainPanel().getHeaderPanel().addActionListenerToStartseiteBtn(al);
+	}
+
+	// Methode für den Controller damit er weiß was bei dem Klick passieren Soll.
 	public void showMainPanel() {
 		this.setContentPane(this.getMainPanel());
 	}
-	
+
 }
