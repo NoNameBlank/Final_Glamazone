@@ -87,15 +87,15 @@ public class HeaderPanel extends JPanel {
 	public HeaderPanel() {
 
 		// Panel
-		super.setBounds(0, 0, 1024, 150);
-		super.setLayout(null);// Warum noch mal Null?
+		super.setBounds(0, 0, 1024, 120);
+		setLayout(null);// Warum noch mal Null?
 		super.setBackground(Color.BLACK);
 		// Logo
 		this.setLogo(new JLabel());
 		ImageIcon glamazoneIcon = new ImageIcon(StartPanel.class.getResource("/Glamazone.png"));
 		ImageIcon glamazoneScaledIcon = new ImageIcon(glamazoneIcon.getImage().getScaledInstance(200, 200, 0));
 		this.getLogo().setIcon(glamazoneScaledIcon);
-		this.getLogo().setBounds(0, 0, 100, 100);
+		this.getLogo().setBounds(10, 0, 235, 69);
 		super.add(this.getLogo());
 
 //		this.setBtnStartseite(new JButton("StartSeite"));
@@ -112,26 +112,26 @@ public class HeaderPanel extends JPanel {
 			e1.printStackTrace();
 		}
 		this.getBtnStartseite().setActionCommand("home");
-		this.getBtnStartseite().setBounds(50, 100, 25, 20);
+		this.getBtnStartseite().setBounds(50, 80, 25, 20);
 		// Suchleiste
 		this.setSuche(new JTextField());
-		this.getSuche().setBounds(80, 100, 350, 20);
+		this.getSuche().setBounds(80, 80, 350, 20);
 		super.add(this.getSuche());
 
 		// Button Suche
 		this.setBtnSuchen(new JButton("Suche"));
-		this.getBtnSuchen().setBounds(435, 100, 75, 20); // ( X-Achse , Y-Achse, Länge, Breite)
+		this.getBtnSuchen().setBounds(435, 80, 75, 20); // ( X-Achse , Y-Achse, Länge, Breite)
 		super.add(this.getBtnSuchen());
 //		System.out.println("Konstruktor Headerpanel: " + this.getBtnStartseite().hashCode());
 
 		// Button WarenKorb
 		this.setBtnWarenkorb(new JButton("Warenkorb"));
-		this.getBtnWarenkorb().setBounds(515, 100, 100, 20);
+		this.getBtnWarenkorb().setBounds(520, 80, 100, 20);
 		super.add(this.getBtnWarenkorb());
 
 		// Button Kasse
 		this.setBtnKasse(new JButton("Kasse"));
-		this.getBtnKasse().setBounds(620, 100, 100, 20);
+		this.getBtnKasse().setBounds(630, 80, 100, 20);
 		super.add(this.getBtnKasse());
 		
 		//Label TagDatumZeit
@@ -147,7 +147,7 @@ public class HeaderPanel extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				SimpleDateFormat abf = new SimpleDateFormat("HH:mm:ss");
+				
 				String dateStr = String.format("<html><font color=red>  %ta, %1$te. %1$tb %1$tY - %1$tT </font></html>", System.currentTimeMillis());
 				test.setText(dateStr);
 			
@@ -155,7 +155,7 @@ public class HeaderPanel extends JPanel {
 		});
 		 
 		timer.start();
-		test.setBounds(775,100,200,20);
+		test.setBounds(750,80,200,20);
 		add(test);
 		
 		
