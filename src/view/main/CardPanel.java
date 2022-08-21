@@ -40,7 +40,9 @@ public class CardPanel extends JPanel{
 		super.setBackground(Color.BLUE);
 		
 		this.setShoppingPanel(new ShoppingPanel());
+		
 		super.add(this.getShoppingPanel());
+		
 		
 		
 		
