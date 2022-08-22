@@ -48,9 +48,9 @@ public class MainView extends JFrame {
 
 	}
 
-	// get StartPanel von Kategorie ansicht
+	// get Für den Controoler damit er weiß wo?
 	public void addActionListenerToStartseiteBtn(ActionListener al) {
-		this.getMainPanel().getHeaderPanel().addActionListenerToStartseiteBtn(al);
+		this.getMainPanel().addActionListenerToStartseiteBtn(al);
 	}
 
 	// Methode für den Controller damit er weiß was bei dem Klick passieren Soll.

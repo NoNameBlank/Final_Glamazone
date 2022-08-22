@@ -105,12 +105,13 @@ public class HeaderPanel extends JPanel {
 		try {
 			BufferedImage img = ImageIO.read(new File("./ressources/HomeBtn.png"));
 			this.setBtnStartseite(new JButton(new ImageIcon(img)));
-			super.add(this.getBtnStartseite());
+			
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
-		this.getBtnStartseite().setActionCommand("home");
 		this.getBtnStartseite().setBounds(50, 80, 25, 20);
+		super.add(this.getBtnStartseite());
+		
 		// Suchleiste
 		this.setSuche(new JTextField());
 		this.getSuche().setBounds(80, 80, 350, 20);
@@ -120,7 +121,7 @@ public class HeaderPanel extends JPanel {
 		this.setBtnSuchen(new JButton("Suche"));
 		this.getBtnSuchen().setBounds(435, 80, 75, 20); // ( X-Achse , Y-Achse, Länge, Breite)
 		super.add(this.getBtnSuchen());
-//		System.out.println("Konstruktor Headerpanel: " + this.getBtnStartseite().hashCode());
+//		
 
 		// Button WarenKorb
 		this.setBtnWarenkorb(new JButton("Warenkorb"));
@@ -167,7 +168,7 @@ public class HeaderPanel extends JPanel {
 	
 	public void addActionListenerToStartseiteBtn(ActionListener al) {
 		this.getBtnStartseite().addActionListener(al);
-	}
+			}
 	
 
 }

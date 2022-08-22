@@ -1,6 +1,7 @@
 package view.main;
 
 import java.awt.Color;
+import java.awt.event.ActionListener;
 
 import javax.swing.JPanel;
 
@@ -48,6 +49,10 @@ public class MainPanel extends JPanel {
 		this.setMenuPanel(new MenuPanel());
 		super.add(getMenuPanel());
 
+	}
+	
+	public void addActionListenerToStartseiteBtn(ActionListener al) {
+		this.getHeaderPanel().addActionListenerToStartseiteBtn(al);
 	}
 
 }

@@ -70,19 +70,29 @@ public class ShoppingPanel extends JPanel {
 				this.getArtikelList()
 						.add(new ArtikelPanel(bild + " " + i, name + " " + i, productText + " " + i, preis));
 			}
+		}else if(bild.equals("Kat2 ")) {
+			for (int i = 0; i < 10; i++) {
+				this.getArtikelList()
+						.add(new ArtikelPanel(bild + " " + i, name + " " + i, productText + " " + i, preis));
+			}
+		}else if(bild.equals("Kat3 ")) {
+			for (int i = 0; i < 10; i++) {
+				this.getArtikelList()
+						.add(new ArtikelPanel(bild + " " + i, name + " " + i, productText + " " + i, preis));
+			}
 		}
-
 		// Alle Artikel Entfernen
 		this.getDisplayPanel().removeAll();
-		// Dem AnzeigePanel ein neues GridLayout geben, da so viele Zeilen benoetigt werden,
+		// Dem AnzeigePanel ein neues GridLayout geben, da so viele Zeilen benoetigt
+		// werden,
 		// wie Panels in der Liste sind.
-		this.getDisplayPanel().setLayout(new GridLayout(this.getArtikelList().size(),1));
-		//dem DisplayPanel die ArtikelPanel geben 
-		this.getArtikelList().forEach(item->this.getDisplayPanel().add(item));
-		//Anzeige panel neu malen 
+		this.getDisplayPanel().setLayout(new GridLayout(this.getArtikelList().size(), 1));
+		// dem DisplayPanel die ArtikelPanel geben
+		this.getArtikelList().forEach(item -> this.getDisplayPanel().add(item));
+		// Anzeige panel neu malen
 		super.revalidate();
 		super.repaint();
-		
+
 	}
 
 }
